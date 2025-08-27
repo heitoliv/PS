@@ -1,12 +1,13 @@
-public class Operacoes {
+package Calculadora;
+
+public class Model {
     public float add(float n1, float n2){
         return n1 + n2;
     }
 
-    public float div(float n1, float n2){
+    public float div(float n1, float n2) throws IllegalArgumentException{
         if (n2 == 0) {
-            System.out.println("Erro: Não é possível dividir por zero.");
-            return 0; // Retorna 0 em caso de erro
+            throw new IllegalArgumentException("Não é possível dividir por zero.");
         }
         else {
             return n1 / n2;
@@ -18,6 +19,6 @@ public class Operacoes {
     }
 
     public float sub(float n1, float n2){
-        return n1 - n2;
-    }
+            return n1 - n2;
+        }
 }
